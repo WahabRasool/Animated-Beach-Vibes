@@ -1,0 +1,219 @@
+:root {
+    --c-woodsmoke: #0c0b14;
+    --c-woodsmoke-l1: #221f38;
+    --c-indigo: #3a3e71;
+    --c-plum: #875b88;
+    --c-petal: #ce8092;
+    --c-peach: #f09d92;
+    --c-citrus: #f4be95;
+    --c-sundrop: #f7dca6;
+    --c-blaze: #fbe7d1;
+    --c-wave: #6394d3;
+   }
+   
+   body {
+    background-color: #333;
+   }
+   
+   .picture {
+    /* center the div */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    height: 25rem;
+    width: 40.45rem;
+    border: 1rem ridge var(--c-citrus);
+    background-color: var(--c-indigo);
+   }
+   
+   .sky {
+    position: relative;
+    height: 75%;
+    width: 100%;
+    background: no-repeat
+     linear-gradient(
+      to bottom,
+      var(--c-indigo) 0%,
+      var(--c-plum) 21%,
+      var(--c-petal) 44%,
+      var(--c-peach) 71%,
+      var(--c-citrus) 95%,
+      var(--c-sundrop) 100%
+     );
+   }
+   
+   .sun {
+    border-radius: 100%;
+    height: 5rem;
+    width: 6rem;
+    position: absolute;
+    bottom: -2rem;
+    right: 3rem;
+    background-color: var(--c-blaze);
+    background: no-repeat
+     linear-gradient(
+      to bottom,
+      var(--c-blaze) 0%,
+      var(--c-blaze) 30%,
+      transparent 100%
+     );
+    box-shadow: 0 -0.75rem 4rem 0.75rem var(--c-blaze);
+   }
+   
+   .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(2px 2px at 20% 30%, #eee, rgba(0, 0, 0, 0)),
+     radial-gradient(3px 3px at 10% 40%, #fff, rgba(0, 0, 0, 0)),
+     radial-gradient(2px 2px at 45% 25%, #fff, rgba(0, 0, 0, 0)),
+     radial-gradient(2px 2px at 70% 15%, #eee, rgba(0, 0, 0, 0)),
+     radial-gradient(1px 1px at 30% 10%, #fff, rgba(0, 0, 0, 0)),
+     radial-gradient(2px 2px at 50% 90%, #ddd, rgba(0, 0, 0, 0)),
+     radial-gradient(2px 2px at 58% 44%, #eee, rgba(0, 0, 0, 0)),
+     radial-gradient(1px 1px at 25% 5%, #fff, rgba(0, 0, 0, 0)),
+     radial-gradient(3px 3px at 90% 35%, #fff, rgba(0, 0, 0, 0)),
+     radial-gradient(2px 2px at 15% 12%, #ddd, rgba(0, 0, 0, 0));
+   }
+   
+   .earth {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+   }
+   
+   .earth-0 {
+    position: absolute;
+    top: 0;
+    background-color: var(--c-woodsmoke-l1);
+    width: 60%;
+    height: 60%;
+    clip-path: polygon(
+     19% 44%,
+     40% 55%,
+     49% 48%,
+     54% 50%,
+     59% 50%,
+     66% 55%,
+     71% 60%,
+     75% 65%,
+     78% 67%,
+     88% 67%,
+     100% 75%,
+     94% 86%,
+     89% 87%,
+     80% 82%,
+     65% 88%,
+     52% 82%,
+     41% 96%,
+     26% 100%,
+     0% 98%,
+     0% 45%
+    );
+   }
+   
+   .earth-1 {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--c-woodsmoke);
+    width: 85%;
+    height: 100%;
+    clip-path: polygon(
+     5% 23%,
+     13% 33%,
+     27% 52%,
+     37% 51%,
+     46% 59%,
+     58% 65%,
+     72% 63%,
+     83% 74%,
+     100% 100%,
+     100% 100%,
+     100% 100%,
+     0 100%,
+     0% 20%
+    );
+    z-index: 900;
+   }
+   
+   .boat {
+    position: absolute;
+    top: 30%;
+    left: 0.5rem;
+    z-index: 200;
+    animation: row 75s ease;
+   }
+   
+   .boat-wrapper,
+   .boat-shadow {
+    width: 1.5rem;
+    height: 1.5rem;
+   }
+   
+   .boat-shadow {
+    position: absolute;
+    transform: scale(1, -1) skew(10deg) translatex(-5px);
+    opacity: 0.5;
+   }
+   
+   .mast {
+    position: absolute;
+    top: 10%;
+    right: 55%;
+    width: 5%;
+    height: 90%;
+    background-color: var(--c-woodsmoke);
+   }
+   
+   .sail-l {
+    position: absolute;
+    width: 40%;
+    height: 62%;
+    top: 10%;
+    background-color: var(--c-plum);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+   }
+   
+   .sail-r {
+    position: absolute;
+    right: 0;
+    width: 55%;
+    height: 70%;
+    background-color: var(--c-plum);
+    clip-path: polygon(100% 100%, 0 100%, 0 0);
+   }
+   
+   .hull {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background-color: var(--c-woodsmoke);
+    clip-path: polygon(0 0, 100% 0, 77% 100%, 22% 100%);
+   }
+   
+   @keyframes row {
+    0% {
+     left: 0%;
+     top: 35%;
+    }
+   
+    30% {
+     left: 70%;
+     top: 48%;
+    }
+   
+    45% {
+     left: 68%;
+     top: 54%;
+    }
+   
+    100% {
+     left: 0%;
+     top: 58%;
+    }
+   }
+   
